@@ -1,0 +1,62 @@
+# -----------------------------------------------------------
+# IT 533 – Week 2 Lab Assignment
+# Author: Nicholas Summerlee
+# Description:
+# This program demonstrates variable assignment, string manipulation,
+# string formatting techniques, numeric operations, and use of the math module.
+# -----------------------------------------------------------
+#1 Stores first
+my_firstname_lower = "nicholas" 
+#2 Stores last name
+my_lastname_UPPER = "SUMMERLEE"
+#3 Print Hello, and concatenante the flipped casing structre with .upp() and .lower()
+print (f"Hello, {my_firstname_lower.upper()} {my_lastname_UPPER.lower()}")
+# 4 Print two new lines
+print("\n\n")
+# 5 Creates a new variable that stores your first and last name together with a space between both parts.
+my_full_name = f"{my_firstname_lower} {my_lastname_UPPER}"
+# 6 Slice out the last name with .find(" ") +1:
+print(my_full_name[my_full_name.find(" ") + 1:])
+# 7 Replaces your last name in the variable you created in step 5 with "<your last name>, 
+# Walsh College Student"; print out the new value of this variable.
+update_name = my_full_name.replace(my_lastname_UPPER, f"{my_lastname_UPPER}, Walsh College Student")
+# 8 Print quote 
+print(update_name)
+
+print(""""Start by doing whats necessary; then do what's possible; and suddenly you are doing the impossible - Francis of Assisi" """)
+# 9 Stores 2 decimal numbers as variables.
+num1 = 69.1234
+num2 = 45.5678
+#10 Stores one addition, one subtraction, one multiplication, and one division operation of these variables as variables.
+add = num1+num2
+sub = num1-num2
+mult = num1*num2
+div = num1/num2
+# 11 Prints out each of the four results as:
+# <numeric value of variable 1> plus <numeric value of variable 2> equals <value of variable that stored the result of addition>
+# <numeric value of variable 1> minus <numeric value of variable 2> equals <value of variable that stored the result of subtraction>
+# ...etc. Each output should be on its own line and utilize a different technique for displaying the requested information 
+# (concatenation, string formatting expressions, string formatting method calls, f-Strings).
+import math
+#Concatenate format
+print(str(num1) + " + " + str(num2) + " = " + str(add)) 
+#String formatting expression
+print ("%s - %s = %s" % (num1,num2,sub))
+#String format Call to .format
+print("{} x {} = {}".format(num1,num2,mult))
+#f-string format
+print(f"{num1} / {num2} = {div}")
+# 12 Creates a new variable called sq_root that stores the square root of the variable that holds the 
+# result of the multiplication operation you performed in step 10 to two decimal places. Print out this value as:
+# The square root of <value of variable that stored the result of multiplication> equals <the variable you 
+# just calculated for this step>
+# You may pick your own method for displaying this information.
+sqrt = round(math.sqrt(mult), 2)
+print(f"The square root of {mult} = {sqrt}")
+# Stores the current month as a string variable (e.g. March, June, etc.) and day of the month as a numeric variable.
+month = "October"
+day = 11
+#Outputs "Today is day <day of month> of the month of <month variable>." This should be on a new line and tabbed 
+# over two times. You may pick your own method for displaying this information, but it should be different than the 
+# technique you used in step 12.
+print ("\n\t\tToday is day", str(day), "of the month", month + ".")
